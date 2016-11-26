@@ -1,4 +1,4 @@
 # JumpIn
 
-Android Mobile Application,
-Social Network App.
+Cloud Based,
+Social Network Application.
