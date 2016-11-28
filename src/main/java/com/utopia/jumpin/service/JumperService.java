@@ -4,9 +4,10 @@ import java.util.List;
 import java.util.Set;
 
 import com.utopia.jumpin.model.Arrow;
-import com.utopia.jumpin.model.Balloon;
+import com.utopia.jumpin.model.Cloud;
 import com.utopia.jumpin.model.Jumper;
-import com.utopia.jumpin.model.Mix;
+import com.utopia.jumpin.model.Balloon;
+import com.utopia.jumpin.repository.JumperRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,18 +21,19 @@ import org.springframework.transaction.annotation.Transactional;
 public class JumperService implements IJumperService{
 
 	@Autowired
-	private BalloonService balloonService;
+	private CloudService cloudService;
+	@Autowired
+	private JumperRepository jumperRepository;
 	
 	@Override
 	public Jumper create(Jumper jumper) {
-		// TODO Auto-generated method stub
-		return null;
+		return jumperRepository.save(jumper);
 	}
 
 	@Override
 	public Jumper update(Jumper jumper) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO perform update
+		return jumperRepository.save(jumper);
 	}
 
 	@Override
@@ -40,32 +42,32 @@ public class JumperService implements IJumperService{
 		return null;
 	}
 
+	@Override
 	public List<Jumper> getAll(){
-		// TODO Auto-generated method stub
-		return null;
+		return jumperRepository.findAll();
 	}
 
+	@Override
 	public Jumper getOne(Long id){
-		// TODO Auto-generated method stub
-		return null;
+		return jumperRepository.findOne(id);
 	}
 
-	@Override
-	public Balloon jumpIn(Jumper jumper, Balloon balloon) {
-		Set<Jumper> jumpers = balloon.getJumpers();
+	@Override //This Should be moved to balloons service
+	public Cloud jumpIn(Jumper jumper, Cloud cloud) {
+		Set<Jumper> jumpers = cloud.getJumpers();
 		jumpers.add(jumper);
-		balloon.setJumpers(jumpers);
-		return balloonService.update(balloon);
+		cloud.setJumpers(jumpers);
+		return cloudService.update(cloud);
 	}
 
-	@Override
+	@Override //to be moved to Cloud service
 	public void createEvent(String eventName) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void postComment(Arrow comment, Mix event) {
+	@Override //should moved to Cloud services
+	public void postComment(Arrow comment, Balloon event) {
 		// TODO Auto-generated method stub
 		
 	}

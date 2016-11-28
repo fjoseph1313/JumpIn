@@ -1,6 +1,7 @@
 package com.utopia.jumpin.service;
 
 import com.utopia.jumpin.model.Balloon;
+import com.utopia.jumpin.model.Cloud;
 
 import java.util.List;
 

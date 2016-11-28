@@ -1,3 +1,5 @@
+C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\service\CloudService.java
+C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\model\Cloud.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\service\BalloonService.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\repository\JumperRepository.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\model\Arrow.java
@@ -8,8 +10,8 @@ C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\ser
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\controller\JumpInHomeController.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\model\Jumper.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\JumpInApplication.java
-C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\model\Mix.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\model\Balloon.java
-C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\repository\MixRepository.java
+C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\repository\CloudRepository.java
+C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\service\ICloudService.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\service\IJumperService.java
 C:\cygwin64\home\fjoseph1313\projects\JumpIn\src\main\java\com\utopia\jumpin\service\ICrudService.java

@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface JumperRepository extends JpaRepository<Jumper, Long>{
 
-    public Jumper findByJumperName(String name);
+    Jumper findByJumperName(String name);
 
 }

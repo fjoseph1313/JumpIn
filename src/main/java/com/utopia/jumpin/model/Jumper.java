@@ -49,20 +49,20 @@ public class Jumper implements Serializable{
 	
 	@Setter @Getter
 	@ManyToMany(cascade = CascadeType.PERSIST)
-	@JoinTable(name = "balloon_jumper", joinColumns = {@JoinColumn(name = "jumper_id")}, inverseJoinColumns = {@JoinColumn(name="balloon_id")})
-	private Set<Balloon> balloons;
+	@JoinTable(name = "cloud_jumper", joinColumns = {@JoinColumn(name = "jumper_id")}, inverseJoinColumns = {@JoinColumn(name="cloud_id")})
+	private Set<Cloud> clouds;
 	
 	@Setter @Getter
 	@OneToMany(mappedBy = "jumper",  targetEntity = Arrow.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private List<Arrow> arrows;
 	
 	
-	public Set<Balloon> getBalloons() {
-		return balloons;
+	public Set<Cloud> getClouds() {
+		return clouds;
 	}
 
-	public void setBalloons(Set<Balloon> balloons) {
-		this.balloons = balloons;
+	public void setClouds(Set<Cloud> clouds) {
+		this.clouds = clouds;
 	}
 
 	public Long getId() {

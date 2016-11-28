@@ -116,6 +116,16 @@
       "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
     },
     {
+      "name": "facebook.resource.jwt.key-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "facebook.resource.jwt.key-value",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
       "name": "facebook.resource.prefer-token-info",
       "type": "java.lang.Boolean",
       "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
@@ -204,6 +214,16 @@
       "name": "github.resource.id",
       "type": "java.lang.String",
       "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties"
+    },
+    {
+      "name": "github.resource.jwt.key-uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
+    },
+    {
+      "name": "github.resource.jwt.key-value",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties$Jwt"
     },
     {
       "name": "github.resource.prefer-token-info",

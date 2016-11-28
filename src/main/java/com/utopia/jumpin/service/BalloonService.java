@@ -13,7 +13,7 @@ import java.util.List;
 public class BalloonService implements IBalloonService{
 	
 	@Autowired
-	private BalloonRepository ballonRepo;
+	private BalloonRepository ballonRepository;
 
 	@Override
 	public Balloon create(Balloon balloon){

@@ -35,8 +35,8 @@ public class Arrow implements Serializable{
 	
 	@Setter @Getter
 	@ManyToOne
-	@JoinColumn(name = "mix_id")
-	private Mix mix;
+	@JoinColumn(name = "balloon_id")
+	private Balloon balloon;
 
 	public Long getId() {
 		return id;
@@ -70,12 +70,12 @@ public class Arrow implements Serializable{
 		this.jumper = jumper;
 	}
 
-	public Mix getMix() {
-		return mix;
+	public Balloon getBalloon() {
+		return balloon;
 	}
 
-	public void setMix(Mix mix) {
-		this.mix = mix;
+	public void setBalloon(Balloon balloon) {
+		this.balloon = balloon;
 	}
 	
 	
