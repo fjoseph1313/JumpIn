@@ -11,7 +11,7 @@ public interface ICloudService extends ICrudService<Cloud>{
 
     public Cloud create(Cloud cloud);
 
-    public Cloud update(Cloud cloud);
+    public Cloud update(Long id, Cloud cloud);
 
     public Cloud delete(Cloud cloud);
 

@@ -38,7 +38,7 @@ public class Balloon implements Serializable{
 	@Setter @Getter
 	@ManyToOne
 	@JoinColumn(name = "cloud_id")
-	private Cloud clouds;
+	private Cloud cloud;
 	
 	@Setter @Getter
 	@OneToMany(mappedBy = "balloon", targetEntity = Arrow.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
@@ -76,12 +76,12 @@ public class Balloon implements Serializable{
 		this.balloonStatus = balloonStatus;
 	}
 
-	public Cloud getClouds() {
-		return clouds;
+	public Cloud getCloud() {
+		return cloud;
 	}
 
-	public void setClouds(Cloud clouds) {
-		this.clouds = clouds;
+	public void setCloud(Cloud cloud) {
+		this.cloud = cloud;
 	}
 
 	public List<Arrow> getArrows() {

@@ -1,5 +1,7 @@
 package com.utopia.jumpin.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -24,6 +26,9 @@ public class JumperService implements IJumperService{
 	private CloudService cloudService;
 	@Autowired
 	private JumperRepository jumperRepository;
+
+	//This mock for controller
+	private static final List<Jumper> jumpers = Arrays.asList(new Jumper("testJumper", "status = 'Active?'"));
 	
 	@Override
 	public Jumper create(Jumper jumper) {
@@ -31,7 +36,7 @@ public class JumperService implements IJumperService{
 	}
 
 	@Override
-	public Jumper update(Jumper jumper) {
+	public Jumper update(Long id, Jumper jumper) {
 		// TODO perform update
 		return jumperRepository.save(jumper);
 	}
@@ -44,7 +49,8 @@ public class JumperService implements IJumperService{
 
 	@Override
 	public List<Jumper> getAll(){
-		return jumperRepository.findAll();
+		return jumpers;
+		//return jumperRepository.findAll();
 	}
 
 	@Override
@@ -54,20 +60,15 @@ public class JumperService implements IJumperService{
 
 	@Override //This Should be moved to balloons service
 	public Cloud jumpIn(Jumper jumper, Cloud cloud) {
+		Long id = cloud.getId();
 		Set<Jumper> jumpers = cloud.getJumpers();
 		jumpers.add(jumper);
 		cloud.setJumpers(jumpers);
-		return cloudService.update(cloud);
+		return cloudService.update(id, cloud);
 	}
 
 	@Override //to be moved to Cloud service
 	public void createEvent(String eventName) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override //should moved to Cloud services
-	public void postComment(Arrow comment, Balloon event) {
 		// TODO Auto-generated method stub
 		
 	}

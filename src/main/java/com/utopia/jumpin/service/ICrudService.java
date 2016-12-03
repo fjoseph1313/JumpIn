@@ -10,7 +10,7 @@ public interface ICrudService<T> {
 	
 	public T create(T t);
 	
-	public T update(T t);
+	public T update(Long id, T t);
 	
 	public T delete(T t);
 	

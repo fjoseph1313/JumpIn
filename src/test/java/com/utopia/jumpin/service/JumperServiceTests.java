@@ -32,13 +32,13 @@ public class JumperServiceTests {
 	
 	@Test
 	public void testJumpIn() throws Exception{
-		Cloud balloon = new Cloud();
-		balloon.setId(new Long(1L));
+		Cloud cloud = new Cloud();
+		cloud.setId(new Long(1L));
 		Set jumpers = new HashSet<Jumper>();
 		jumpers.add(new Jumper("shuta", "321"));
-		balloon.setJumpers(jumpers);
+		cloud.setJumpers(jumpers);
 
-		Cloud baln = jumperService.jumpIn(new Jumper("shooter", "123"), balloon);
+		Cloud baln = jumperService.jumpIn(new Jumper("shooter", "123"), cloud);
 		Assert.assertNotNull(baln);
 		Assert.assertEquals(2, baln.getJumpers().size());
 	}

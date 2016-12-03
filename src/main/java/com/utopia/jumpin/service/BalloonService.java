@@ -1,5 +1,6 @@
 package com.utopia.jumpin.service;
 
+import com.utopia.jumpin.model.Arrow;
 import com.utopia.jumpin.model.Balloon;
 import com.utopia.jumpin.repository.BalloonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,11 @@ public class BalloonService implements IBalloonService{
 
 	@Override
 	public Balloon create(Balloon balloon){
-		return null;
+		return ballonRepository.save(balloon);
 	}
 
 	@Override
-	public Balloon update(Balloon balloon) {
+	public Balloon update(Long id, Balloon balloon) {
 		//ballonRepo.save(balloon);
 		System.out.println("Ballon Update method has been called");
 		return balloon;
@@ -34,10 +35,16 @@ public class BalloonService implements IBalloonService{
 	}
 
 	public List<Balloon> getAll(){
-		return null;
+		return ballonRepository.findAll();
 	}
 
 	public Balloon getOne(Long id){
-		return null;
+		return ballonRepository.findOne(id);
+	}
+
+	public Balloon popBalloon(Long id, Arrow arrow){
+		Balloon current = ballonRepository.findOne(id);
+		current.getArrows().add(arrow);
+		return ballonRepository.save(current);
 	}
 }
