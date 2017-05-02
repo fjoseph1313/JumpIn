@@ -1,6 +1,8 @@
 package com.utopia.jumpin;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -45,6 +47,8 @@ import java.util.List;
 @Order(6)
 public class JumpInApplication extends WebSecurityConfigurerAdapter {
 
+    public static final Logger LOGGER = LoggerFactory.getLogger(JumpInApplication.class);
+
     @Autowired
     OAuth2ClientContext oauth2ClientContext;
 
@@ -74,7 +78,7 @@ public class JumpInApplication extends WebSecurityConfigurerAdapter {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(JumpInApplication.class, args);
 
-        System.out.println("Let's inspect the beans provided by Spring Boot:");
+        LOGGER.info("Let's inspect the beans provided by Spring Boot:");
 
         String[] beanNames = ctx.getBeanDefinitionNames();
         Arrays.sort(beanNames);
